@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ViewController+Thread.h"
 #import "ViewController+ThreadTest.h"
+#import "ViewController+ThreadSyncTest.h"
 
 @interface ViewController ()
 
@@ -18,11 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.token = @"token";
+    self.commonLock = [[NSLock alloc] init];
+    self.commonRecursiveLock = [[NSRecursiveLock alloc] init];
+    
     NSLog(@"current thread %@", [NSThread currentThread]);
     
-    [self testGCD];
-    //    [self testNSOperation];
-    //    [self testNSThread];
+//    [self testGCD];
+//    [self testNSOperation];
+//    [self testNSThread];
+    
+    //Thread Sync
+//    [self testSynchronized];
+//    [self testNSLock];
+    [self testNSRecursiveLock];
 }
 
 @end

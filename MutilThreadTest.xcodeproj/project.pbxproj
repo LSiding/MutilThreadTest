@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3546ABB5216E1D73009A4300 /* ViewController+ThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546ABB4216E1D73009A4300 /* ViewController+ThreadTest.m */; };
+		3546ABBE216E1F3C009A4300 /* ViewController+ThreadSyncTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546ABBD216E1F3C009A4300 /* ViewController+ThreadSyncTest.m */; };
 		B4C0D0EA215E7C9F00718646 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0D0E9215E7C9F00718646 /* AppDelegate.m */; };
 		B4C0D0ED215E7C9F00718646 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0D0EC215E7C9F00718646 /* ViewController.m */; };
 		B4C0D0F0215E7C9F00718646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C0D0EE215E7C9F00718646 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 		3546ABB2216E1D08009A4300 /* ViewController+Thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+Thread.h"; sourceTree = "<group>"; };
 		3546ABB3216E1D73009A4300 /* ViewController+ThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ThreadTest.h"; sourceTree = "<group>"; };
 		3546ABB4216E1D73009A4300 /* ViewController+ThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ThreadTest.m"; sourceTree = "<group>"; };
+		3546ABBC216E1F3C009A4300 /* ViewController+ThreadSyncTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+ThreadSyncTest.h"; sourceTree = "<group>"; };
+		3546ABBD216E1F3C009A4300 /* ViewController+ThreadSyncTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+ThreadSyncTest.m"; sourceTree = "<group>"; };
 		B4C0D0E5215E7C9F00718646 /* MutilThreadTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MutilThreadTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C0D0E8215E7C9F00718646 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4C0D0E9215E7C9F00718646 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				3546ABB2216E1D08009A4300 /* ViewController+Thread.h */,
 				3546ABB3216E1D73009A4300 /* ViewController+ThreadTest.h */,
 				3546ABB4216E1D73009A4300 /* ViewController+ThreadTest.m */,
+				3546ABBC216E1F3C009A4300 /* ViewController+ThreadSyncTest.h */,
+				3546ABBD216E1F3C009A4300 /* ViewController+ThreadSyncTest.m */,
 				B4C0D0EE215E7C9F00718646 /* Main.storyboard */,
 				B4C0D0F1215E7C9F00718646 /* Assets.xcassets */,
 				B4C0D0F3215E7C9F00718646 /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 				3546ABB5216E1D73009A4300 /* ViewController+ThreadTest.m in Sources */,
 				B4C0D0ED215E7C9F00718646 /* ViewController.m in Sources */,
 				B4C0D0F8215E7C9F00718646 /* main.m in Sources */,
+				3546ABBE216E1F3C009A4300 /* ViewController+ThreadSyncTest.m in Sources */,
 				B4C0D0EA215E7C9F00718646 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

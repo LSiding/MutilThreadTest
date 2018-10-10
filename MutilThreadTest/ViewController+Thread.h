@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ViewController ()
 
 @property (strong, nonatomic)   dispatch_queue_t queue;
+@property (strong, nonatomic)   NSString *token;
+@property (strong, nonatomic)   NSLock *commonLock;
+@property (strong, nonatomic)   NSRecursiveLock *commonRecursiveLock;
 
 @end
 
