@@ -33,7 +33,8 @@
     //Thread Sync
 //    [self testSynchronized];
 //    [self testNSLock];
-    [self testNSRecursiveLock];
+//    [self testNSRecursiveLock];
+    [self testOSSpinLock];
 }
 
 @end

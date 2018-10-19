@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)testSynchronized;
 - (void)testNSLock;
 - (void)testNSRecursiveLock;
+- (void)testOSSpinLock;
 
 @end
 

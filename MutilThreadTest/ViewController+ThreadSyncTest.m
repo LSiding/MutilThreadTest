@@ -9,6 +9,8 @@
 #import "ViewController+ThreadSyncTest.h"
 #import "ViewController+Thread.h"
 
+#import <os/lock.h>
+
 @implementation ViewController (ThreadSyncTest)
 
 #pragma mark -
@@ -45,6 +47,7 @@
     NSLock *lock1 = [[NSLock alloc] init];
     NSLock *lock2 = [[NSLock alloc] init];
     
+    //相同的锁对象才能锁住
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"thread1 %@", [NSThread currentThread]);
         [lock1 lock];
@@ -123,8 +126,24 @@
 
 #pragma mark -
 
-- (void)testNSSpinLock {
+- (void)testOSSpinLock {
+    os_unfair_lock_t unfairLock = &(OS_UNFAIR_LOCK_INIT);
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"thread1 %@", [NSThread currentThread]);
+        os_unfair_lock_lock(unfairLock);
+        NSLog(@"thread1-1 %@", [NSThread currentThread]);
+        sleep(3);
+        os_unfair_lock_unlock(unfairLock);
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"thread2 %@", [NSThread currentThread]);
+        os_unfair_lock_lock(unfairLock);
+        NSLog(@"thread2-1 %@", [NSThread currentThread]);
+        sleep(3);
+        os_unfair_lock_unlock(unfairLock);
+    });
 }
 
 #pragma mark -
